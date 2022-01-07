@@ -18,15 +18,15 @@ Ellie Discord Bot ©2018-2022 Emotion#6522
 
 ## Installation
 
-You can read the [installation guide](docs/INSTALLATION.md) here
+You can read the [installation guide](https://docs.emotionchild.com/v4/installation/) here
 
 ## Privacy
 
-You can read it [here](docs/PRIVACY.md)
+You can read it [here](https://docs.emotionchild.com/v4/privacy_policy/)
 
 ## Code of conduct
 
-Please read our [code of conduct](docs/CODE_OF_CONDUCT.md) before contributing
+Please read our [code of conduct](CODE_OF_CONDUCT.md) before contributing
 
 ## Disclaimer
 
