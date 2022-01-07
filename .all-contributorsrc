@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "EmotionChild",
+      "name": "Emotion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36905598?v=4",
+      "profile": "https://www.emotionchild.com",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Ellie-v4",
+  "projectOwner": "EllieBotDevs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
