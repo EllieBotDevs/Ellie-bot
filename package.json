@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^13.5.1",
+    "discord.js": "^13.6.0",
     "dotenv": "^11.0.0",
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
