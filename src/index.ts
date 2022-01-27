@@ -5,7 +5,7 @@ import DiscordClient from './client/client';
 import { Collection, Intents } from 'discord.js';
 import { createConnection, getRepository } from 'typeorm';
 import { GuildConfiguration } from './typeorm/entities/GuildConfiguration';
-import {io} from 'socket.io-client';
+import { io } from 'socket.io-client';
 import { entities } from './typeorm/entities';
 
 const client = new DiscordClient({
