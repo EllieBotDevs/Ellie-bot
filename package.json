@@ -5,7 +5,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "discord.js": "^13.6.0",
-    "dotenv": "^14.3.2",
+    "dotenv": "^16.0.0",
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "socket.io-client": "^4.4.1",
