@@ -1,3 +1,5 @@
+# Ellie
+
 Ellie Discord Bot ©2018-2022 Emotion#6522
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
@@ -18,13 +20,11 @@ Ellie Discord Bot ©2018-2022 Emotion#6522
 
 ## Installation
 
-~~You can read the [installation guide](https://docs.emotionchild.com/v4/installation/) here~~
-This has been temporarily removed while it is remade
+This is not ready but as soon as it is ready there will be a link here
 
 ## Privacy
 
-~~You can read it [here](https://docs.emotionchild.com/v4/privacy_policy/)~~
-This has been temporarily removed while it is remade
+This is not ready but as soon as it is ready there will be a link here
 
 ## Code of conduct
 
