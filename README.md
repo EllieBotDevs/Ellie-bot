@@ -18,11 +18,11 @@ Ellie Discord Bot ©2018-2022 Emotion#6522
 
 ## Installation
 
-This is coming soon
+This is coming soon (if you wish to help join our [Discord](https://discord.gg/SVQVzJq) and let Emotion know)
 
 ## Privacy
 
-This is coming soon
+This is coming soon (if you wish to help join our [Discord](https://discord.gg/SVQVzJq) and let Emotion know)
 
 ## Code of conduct
 
