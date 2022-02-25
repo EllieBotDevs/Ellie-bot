@@ -12,4 +12,7 @@ updates:
     open-pull-requests-limit: 5
     reviewers:
       - EmotionChild
-    target-branch: "develop"
+    target-branch: "development"
+    labels:
+      - "npm"
+      - "dependencies"
