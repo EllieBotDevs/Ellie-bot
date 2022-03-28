@@ -9,7 +9,7 @@
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "socket.io-client": "^4.4.1",
-    "typeorm": "^0.3.3"
+    "typeorm": "^0.3.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
