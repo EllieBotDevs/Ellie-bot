@@ -1,4 +1,3 @@
-# This project has been archived until I can get some help with this -EmotionChild
 ## Ellie Discord Bot ©2018-2022 Emotion#6522
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
