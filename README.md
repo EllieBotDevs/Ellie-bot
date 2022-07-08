@@ -1,9 +1,13 @@
-## Ellie Discord Bot ©2018-2022 Emotion#6522
+# Ellie Discord Bot ©2018-2022 Emotion#6522
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![](https://cdn.discordapp.com/attachments/765441543100170271/914327948667011132/Ellie_Concept_2_transparent_ver.png?size=2048)
+
+## Badges
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=EllieBotDevs_Ellie-bot&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=EllieBotDevs_Ellie-bot) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EllieBotDevs_Ellie-bot&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EllieBotDevs_Ellie-bot) 
 
 ## Contribution Guide
 
