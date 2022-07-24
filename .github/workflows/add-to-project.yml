@@ -12,4 +12,4 @@ jobs:
           # URL of the project to add issues to
           project-url: EllieBotDevs/Ellie-bot
           # A GitHub personal access token with write access to the project
-          github-token: "${{ secrets.GH_PAT }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
