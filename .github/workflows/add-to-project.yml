@@ -1,0 +1,15 @@
+name: Add to Project
+
+on: pull_request
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add To GitHub projects
+        uses: actions/add-to-project@v0.3.0
+        with:
+          # URL of the project to add issues to
+          project-url: EllieBotDevs/Ellie-bot
+          # A GitHub personal access token with write access to the project
+          github-token: "${{ secrets.GH_PAT }}"
