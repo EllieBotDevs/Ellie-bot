@@ -1,0 +1,26 @@
+name: Auto approve
+
+on: pull_request
+
+permissions:
+  contents: read
+
+jobs:
+  auto-approve:
+
+    name: Auto approve Pull Request
+    runs-on: ubuntu-latest
+
+    # for hmarr/auto-approve-action to approve PRs
+    permissions:
+      pull-requests: write
+
+    # Only run this on the main repo
+    if: github.event.pull_request.head.repo.full_name == 'EllieBotDevs/Ellie-bot'
+
+    steps:
+    - name: Approve via actions
+      uses: hmarr/auto-approve-action@v2.2.1
+      if: github.actor == 'EmotionChild' || github.actor == 'dependabot[bot]'
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
