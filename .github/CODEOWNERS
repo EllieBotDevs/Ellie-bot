@@ -1,0 +1,12 @@
+# Modifications to the source code should be handled by the code review team
+*.ts                             @EllieBotDevs/code-reviewers
+
+# Modifications to sensitive files should be reviewed by maintainers
+/.github/                          @EllieBotDevs/dev-team
+CONTRIBUTING.md                    @EllieBotDevs/dev-team
+
+# Changes to the Issue templates need to be checked by the triage team
+/.github/ISSUE_TEMPLATE/           @EllieBotDevs/bug-testers
+
+# This file is handled by TheBusyBiscuit (admins have overwrite access anyway)
+/.github/CODEOWNERS                @EmotionChild
