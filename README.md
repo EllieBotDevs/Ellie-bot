@@ -1,4 +1,6 @@
 # Ellie Discord Bot ©2018-2022 Emotion#6522
+
+## Major rewrite coming soon if you have any suggestions or you want to help let us know in our Discord server
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -22,11 +24,11 @@
 
 ## Installation
 
-This is coming soon (if you wish to help join our [Discord](https://discord.gg/SVQVzJq) and let Emotion know)
+This is coming soon (if you wish to help join our [Discord Server] and let Emotion know)
 
 ## Privacy
 
-This is coming soon (if you wish to help join our [Discord](https://discord.gg/SVQVzJq) and let Emotion know)
+This is coming soon (if you wish to help join our [Discord Server] and let Emotion know)
 
 ## Code of conduct
 
@@ -36,11 +38,11 @@ Please read our [code of conduct](CODE_OF_CONDUCT.md) before contributing
 
 This bot is in an early alpha stage and any help is very much appreciated
 
-Also please only push changes to the [Development Branch](https://github.com/EllieBotDevs/Ellie-v4/tree/development)
+Also please only push changes to the [Development Branch](https://github.com/EllieBotDevs/Ellie-bot/tree/development)
 
 ## Discord Server
 
-If you have any issues you can join our [Discord Server](https://discord.gg/SVQVzJq)
+If you have any issues you can join our [Discord Server]
 
 ## Changelog
 
@@ -69,3 +71,5 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+[Discord Server]: https://discord.gg/SVQVzJq
