@@ -1,4 +1,4 @@
-# Ellie Discord Bot ©2018-2022 Emotion#6522
+# Ellie Discord Bot ©2018-2022 EllieBotDevs
 
 ## Major rewrite coming soon if you have any suggestions or you want to help let us know in our Discord server
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -50,7 +50,22 @@ If you would like to see our progress you can view our [changelog](CHANGELOG.md)
 
 ## Licence
 
-You can view the license for this repo in [LICENSE](LICENSE)
+```
+Copyright 2022 EllieBotDevs
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+To learn more about this license follow the link above or you can view it in the [LICENSE](LICENSE)
 
 ## Contributors ✨
 
