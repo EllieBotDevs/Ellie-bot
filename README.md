@@ -51,7 +51,7 @@ If you would like to see our progress you can view our [changelog](CHANGELOG.md)
 ## Licence
 
 ```
-Copyright [2022] [EllieBotDevs]
+Copyright 2022 EllieBotDevs
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -65,6 +65,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+To learn more about this license follow the link above or you can view it in the [LICENSE](LICENSE)
 
 ## Contributors ✨
 
