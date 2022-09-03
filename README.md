@@ -75,9 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://banditco.dev"><img src="https://avatars.githubusercontent.com/u/84136868?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AidanTheBandit</b></sub></a><br /><a href="https://github.com/EllieBotDevs/Ellie-bot/commits?author=AidanTheBandit1" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://www.emotionchild.com"><img src="https://avatars.githubusercontent.com/u/36905598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Emotion</b></sub></a><br /><a href="https://github.com/EllieBotDevs/Ellie-v4/commits?author=EmotionChild" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.emotionchild.com"><img src="https://avatars.githubusercontent.com/u/36905598?v=4?s=100" width="100px;" alt=""/><br /><sub>  <b>Emotion</b></sub></a><br /><a href="https://github.com/EllieBotDevs/Ellie-v4/commits?author=EmotionChild" title="Code">💻</a></td>
   </tr>
 </table>
 
