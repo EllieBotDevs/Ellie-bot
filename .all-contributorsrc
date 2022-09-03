@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "AidanTheBandit1",
+      "name": "AidanTheBandit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84136868?v=4",
+      "profile": "http://banditco.dev",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "Ellie-bot",
+  "projectOwner": "EllieBotDevs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
