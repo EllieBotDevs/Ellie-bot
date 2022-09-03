@@ -14,6 +14,15 @@
         "code"
       ]
     }
+    {
+      "login": "EmotionChild",
+      "name": "EmotionChild",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36905598?v=4",
+      "profile": "http://www.emotionchild.com",
+      "contributions": [
+        "code"
+      ]
+    }
   ],
   "contributorsPerLine": 7,
   "projectName": "Ellie-bot",
