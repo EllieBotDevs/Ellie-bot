@@ -1,6 +1,5 @@
 # Ellie Discord Bot ©2018-2022 EllieBotDevs
 
-## Major rewrite coming soon if you have any suggestions or you want to help let us know in our Discord server
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -9,7 +8,7 @@
 
 ## Badges
 
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=EllieBotDevs_Ellie-bot&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=EllieBotDevs_Ellie-bot) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EllieBotDevs_Ellie-bot&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EllieBotDevs_Ellie-bot) 
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=EllieBotDevs_Ellie-bot&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=EllieBotDevs_Ellie-bot) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EllieBotDevs_Ellie-bot&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EllieBotDevs_Ellie-bot) [![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
 
 ## Contribution Guide
 
