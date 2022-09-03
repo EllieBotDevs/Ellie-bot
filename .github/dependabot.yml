@@ -14,5 +14,5 @@ updates:
       - EmotionChild
     target-branch: "development"
     labels:
-      - "npm"
+      - "maven"
       - "dependencies"
