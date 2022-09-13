@@ -8,7 +8,7 @@ assignees: 'EmotionChild'
 ---
 
 **Is your feature request related to a problem? Please describe.**
-A clear and concise description of what you would like. Ex. I'm always frustrated when [...]
+A clear and concise description of what you would like. Ex. I'm would like it if "specific feature" was added [...]
 
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
