@@ -7,6 +7,10 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.utils.Compression;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 
+/**
+ *
+ * @author EllieBotDevs (devs@elliebot.net)
+ */
 public class main {
 
     public static void main(String args[]) throws Exception{
