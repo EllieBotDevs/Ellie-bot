@@ -7,6 +7,7 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 5.0.x   | :white_check_mark: |
 | 4.0.x   | :white_check_mark: |
 | 3.0.x   | :x:                |
 | 2.0.x   | :x:                |
@@ -14,8 +15,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+If you find a vulnerability please let us know via [our dev team email](mailto:devs@elliebot.net) or open a ticket in our [Discord server](https://discord.elliebot.net) if you can patch the vulnerability your self please open a pull request and add the "Vulnerable code fixed" tag
