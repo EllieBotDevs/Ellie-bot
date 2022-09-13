@@ -84,4 +84,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-[Discord Server]: https://discord.gg/SVQVzJq
+[Discord Server]: https://discord.elliebot.net
