@@ -1,6 +1,7 @@
 ### This is a work in progress if you have any ideas please place them in this file
 
 Here is the current steps
+
 ```
 1.Fork this repository
 2.Clone your fork: git clone https://github.com/your-username/Ellie-bot.git
