@@ -12,7 +12,7 @@ updates:
     open-pull-requests-limit: 5
     reviewers:
       - EmotionChild
-    target-branch: "development"
+    target-branch: "staging"
     labels:
       - "maven"
       - "dependencies"
