@@ -4,7 +4,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-![](https://cdn.discordapp.com/attachments/765441543100170271/914327948667011132/Ellie_Concept_2_transparent_ver.png?size=2048)
+<img height="210" src="https://cdn.discordapp.com/attachments/765441543100170271/914327948667011132/Ellie_Concept_2_transparent_ver.png?size=2048" width="210"/>
 
 ## Badges
 
@@ -37,7 +37,7 @@ Please read our [code of conduct](CODE_OF_CONDUCT.md) before contributing
 
 This bot is in an early alpha stage and any help is very much appreciated
 
-Also please only push changes to the [Development Branch](https://github.com/EllieBotDevs/Ellie-bot/tree/development)
+Also, please only push changes to the [staging Branch](https://github.com/EllieBotDevs/Ellie-bot/tree/staging)
 
 ## Discord Server
 
@@ -50,7 +50,7 @@ If you would like to see our progress you can view our [changelog](CHANGELOG.md)
 ## Licence
 
 ```
-Copyright 2022 EllieBotDevs
+Copyright 2023 EllieBotDevs
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
