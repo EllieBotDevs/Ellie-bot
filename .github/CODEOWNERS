@@ -1,5 +1,5 @@
 # Modifications to the source code should be handled by the code review team
-*.ts                             @EllieBotDevs/code-reviewers
+*.java                             @EllieBotDevs/code-reviewers
 
 # Modifications to sensitive files should be reviewed by maintainers
 /.github/                          @EllieBotDevs/dev-team
