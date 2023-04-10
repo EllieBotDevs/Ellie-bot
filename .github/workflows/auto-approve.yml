@@ -21,6 +21,6 @@ jobs:
     steps:
     - name: Approve via actions
       uses: hmarr/auto-approve-action@v2.2.1
-      if: github.actor == 'EmotionChild' || github.actor == 'dependabot[bot]'
+      if: github.actor == 'dependabot[bot]'
       with:
         github-token: "${{ secrets.GITHUB_TOKEN }}"
