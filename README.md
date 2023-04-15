@@ -8,7 +8,9 @@
 
 ## Badges
 
-[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/) [![CLA assistant](https://cla-assistant.io/readme/badge/EllieBotDevs/Ellie-bot)](https://cla-assistant.io/EllieBotDevs/Ellie-bot)
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
+[![CLA assistant](https://cla-assistant.io/readme/badge/EllieBotDevs/Ellie-bot)](https://cla-assistant.io/EllieBotDevs/Ellie-bot)
+![Discord](https://img.shields.io/discord/719739778165243944?color=blue&label=Discord&logo=Discord)
 
 ## Contribution Guide
 
