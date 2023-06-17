@@ -1,4 +1,6 @@
-# Ellie Discord Bot ©2018-2022 EllieBotDevs
+# This project has moved homes all future code is now available at https://toastielab.dev/EllieBotDevs/Ellie-bot (please push any new changes to there as this may be archived at a later date)
+
+## Ellie Discord Bot ©2018-2022 EllieBotDevs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
