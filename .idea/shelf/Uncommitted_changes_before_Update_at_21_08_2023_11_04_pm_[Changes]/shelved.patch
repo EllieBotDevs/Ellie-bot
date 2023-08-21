@@ -1,0 +1,328 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>net.elliebot.ellie</groupId>\r\n    <artifactId>EllieBot</artifactId>\r\n    <version>5.0.0</version>\r\n\r\n    <properties>\r\n        <maven.compiler.source>11</maven.compiler.source>\r\n        <maven.compiler.target>11</maven.compiler.target>\r\n    </properties>\r\n    <dependencies>\r\n            <dependency>\r\n                <groupId>net.dv8tion</groupId>\r\n                <artifactId>JDA</artifactId>\r\n                <version>4.4.1_353</version>\r\n            </dependency>\r\n    </dependencies>\r\n    <repositories>\r\n    <repository>\r\n        <id>dv8tion</id>\r\n        <name>m2-dv8tion</name>\r\n        <url>https://m2.dv8tion.net/releases</url>\r\n    </repository>\r\n    </repositories>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ b/pom.xml	(date 1681114047837)
+@@ -18,6 +18,11 @@
+                 <artifactId>JDA</artifactId>
+                 <version>4.4.1_353</version>
+             </dependency>
++        <dependency>
++            <groupId>ch.qos.logback</groupId>
++            <artifactId>logback-classic</artifactId>
++            <version>1.2.8</version>
++        </dependency>
+     </dependencies>
+     <repositories>
+     <repository>
+Index: src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java
+===================================================================
+diff --git a/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java b/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java
+deleted file mode 100644
+--- a/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ /dev/null	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
+@@ -1,8 +0,0 @@
+-package net.elliebot.ellie.commands;
+-
+-/**
+- *
+- * @author EllieBotDevs (devs@elliebot.net)
+- */
+-public class UserInfoCommand {
+-}
+Index: src/main/java/net/elliebot/ellie/events/HelloEvent.java
+===================================================================
+diff --git a/src/main/java/net/elliebot/ellie/events/HelloEvent.java b/src/main/java/net/elliebot/ellie/events/HelloEvent.java
+deleted file mode 100644
+--- a/src/main/java/net/elliebot/ellie/events/HelloEvent.java	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ /dev/null	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
+@@ -1,21 +0,0 @@
+-package net.elliebot.ellie.events;
+-
+-import net.dv8tion.jda.api.entities.Guild;
+-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+-import net.dv8tion.jda.api.hooks.ListenerAdapter;
+-
+-/**
+- *
+- * @author EllieBotDevs (devs@elliebot.net)
+- */
+-public class HelloEvent extends ListenerAdapter {
+-
+-    public void onGuildMessageReceived(GuildMessageReceivedEvent event){
+-       String messageSent = event.getMessage().getContentRaw();
+-       if(messageSent.equalsIgnoreCase("Hi")){
+-           event.getChannel().sendMessage("hello").queue();
+-       }
+-    }
+-
+-
+-}
+Index: src/main/java/net/elliebot/ellie/listeners/EllieListener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/net/elliebot/ellie/listeners/EllieListener.java b/src/main/java/net/elliebot/ellie/listeners/EllieListener.java
+new file mode 100644
+--- /dev/null	(date 1681113991840)
++++ b/src/main/java/net/elliebot/ellie/listeners/EllieListener.java	(date 1681113991840)
+@@ -0,0 +1,25 @@
++package net.elliebot.ellie.listeners;
++
++import net.dv8tion.jda.api.entities.Message;
++import net.dv8tion.jda.api.entities.MessageChannel;
++import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
++import net.dv8tion.jda.api.hooks.ListenerAdapter;
++
++public class EllieListener extends ListenerAdapter
++{
++    @Override
++    public void onMessageReceived(MessageReceivedEvent event)
++    {
++        if (event.getAuthor().isBot()) return;
++        // We don't want to respond to other bot accounts, including ourself
++        Message message = event.getMessage();
++        String content = message.getContentRaw();
++        // getContentRaw() is an atomic getter
++        // getContentDisplay() is a lazy getter which modifies the content for e.g. console view (strip discord formatting)
++        if (content.equals("!ping"))
++        {
++            MessageChannel channel = event.getChannel();
++            channel.sendMessage("Pong!").queue(); // Important to call .queue() on the RestAction returned by sendMessage(...)
++        }
++    }
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_16\" default=\"true\" project-jdk-name=\"temurin-16\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ b/.idea/misc.xml	(date 1692615499283)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"61990dc1-c961-40f0-8a8d-ab716806f62a\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/net/elliebot/ellie/events/HelloEvent.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/net/elliebot/ellie/events/HelloEvent.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/net/elliebot/ellie/main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/net/elliebot/ellie/main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2EhjCsIvMNE0DmvWtphzqS6Qpgr\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"61990dc1-c961-40f0-8a8d-ab716806f62a\" name=\"Changes\" comment=\"\" />\r\n      <created>1663054617242</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1663054617242</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ b/.idea/workspace.xml	(date 1681114047836)
+@@ -5,14 +5,25 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="61990dc1-c961-40f0-8a8d-ab716806f62a" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/events/HelloEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/events/HelloEvent.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/listeners/EllieListener.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/commands/UserInfoCommand.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/events/HelloEvent.java" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/elliebot/ellie/main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+@@ -22,6 +33,19 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;
++  }
++}</component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="eab705c4-6cde-4103-a027-9cde06c6d147" />
++        <option name="url" value="https://github.com/EllieBotDevs/Ellie-bot.git" />
++      </UrlAndAccount>
++    </option>
++  </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+@@ -38,12 +62,13 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/JDRCa/Desktop/Projects/Ellie-bot&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -53,17 +78,85 @@
+       <option name="presentableId" value="Default" />
+       <updated>1663054617242</updated>
+     </task>
++    <task id="LOCAL-00001" summary="Updated REAMEME.md">
++      <created>1678707300888</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1678707300888</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Deleted codeql-analysis.yml as it was outdated">
++      <created>1678708055154</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1678708055154</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Added codeql-analysis.yml as I have updated it to use java instead of JavaScript">
++      <created>1678708239367</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1678708239367</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Updated CODEOWNERS">
++      <created>1678710846454</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1678710846454</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="origin/staging" />
++                </option>
++              </RecentGroup>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="staging" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
+     <option name="TAB_STATES">
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State />
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/staging" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
+           </value>
+         </entry>
+       </map>
+     </option>
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Updated REAMEME.md" />
++    <MESSAGE value="Deleted codeql-analysis.yml as it was outdated" />
++    <MESSAGE value="Added codeql-analysis.yml as I have updated it to use java instead of JavaScript" />
++    <MESSAGE value="Updated CODEOWNERS" />
++    <option name="LAST_COMMIT_MESSAGE" value="Updated CODEOWNERS" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ b/.idea/vcs.xml	(date 1681114047834)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/net/elliebot/ellie/main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package net.elliebot.ellie;\r\n\r\nimport net.elliebot.ellie.events.HelloEvent;\r\nimport net.dv8tion.jda.api.JDA;\r\nimport net.dv8tion.jda.api.JDABuilder;\r\nimport net.dv8tion.jda.api.entities.Activity;\r\nimport net.dv8tion.jda.api.utils.Compression;\r\nimport net.dv8tion.jda.api.utils.cache.CacheFlag;\r\n\r\n/**\r\n *\r\n * @author EllieBotDevs (devs@elliebot.net)\r\n */\r\npublic class main {\r\n\r\n    public static void main(String args[]) throws Exception{\r\n\r\n        JDA jda = JDABuilder.createDefault(\"Bot-Token\").build();\r\n\r\n        jda.addEventListener(new HelloEvent());\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/net/elliebot/ellie/main.java b/src/main/java/net/elliebot/ellie/main.java
+--- a/src/main/java/net/elliebot/ellie/main.java	(revision 8b75992a32e52195bfb4d7d9a503f25dfc9267b0)
++++ b/src/main/java/net/elliebot/ellie/main.java	(date 1681113991841)
+@@ -1,6 +1,6 @@
+ package net.elliebot.ellie;
+ 
+-import net.elliebot.ellie.events.HelloEvent;
++import net.elliebot.ellie.listeners.EllieListener;
+ import net.dv8tion.jda.api.JDA;
+ import net.dv8tion.jda.api.JDABuilder;
+ import net.dv8tion.jda.api.entities.Activity;
+@@ -17,8 +17,7 @@
+ 
+         JDA jda = JDABuilder.createDefault("Bot-Token").build();
+ 
+-        jda.addEventListener(new HelloEvent());
++        jda.addEventListener(new EllieListener());
+     }
+-
+ 
+ }
