@@ -1,4 +1,6 @@
-# Ellie Discord Bot ©2018-2022 EllieBotDevs
+# This project has moved homes all future code is now available at https://toastielab.dev/EllieBotDevs/Ellie-bot (please push any new changes to there as this may be archived at a later date)
+
+## Ellie Discord Bot ©2018-2022 EllieBotDevs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
@@ -8,7 +10,9 @@
 
 ## Badges
 
-[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/) [![CLA assistant](https://cla-assistant.io/readme/badge/EllieBotDevs/Ellie-bot)](https://cla-assistant.io/EllieBotDevs/Ellie-bot)
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github-tools.github.io/github-release-notes/)
+[![CLA assistant](https://cla-assistant.io/readme/badge/EllieBotDevs/Ellie-bot)](https://cla-assistant.io/EllieBotDevs/Ellie-bot)
+![Discord](https://img.shields.io/discord/719739778165243944?color=blue&label=Discord&logo=Discord)
 
 ## Contribution Guide
 
