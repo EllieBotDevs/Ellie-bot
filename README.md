@@ -1,4 +1,6 @@
-# Ellie Discord Bot ©2018-2022 EllieBotDevs
+## This project has moved homes to https://toastielab.dev/EllieBotDevs/Ellie-bot (the repo over there will serve as a mirror until everything has moved over properly)
+
+# Ellie Discord Bot ©2018-2023 EllieBotDevs
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
@@ -66,7 +68,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-To learn more about this license follow the link above or you can view it in the [LICENSE](LICENSE)
+To learn more about this license follow the link above, or you can view it in the [LICENSE](LICENSE)
 
 ## Contributors ✨
 
